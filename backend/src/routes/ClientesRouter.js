@@ -12,7 +12,11 @@ routes.get("/clientes/:id", (req, res, next) =>{
 })
 
 routes.post("/clientes", (req, res, next) =>{
-    ClientesController.CriarRegistro(req, res, next)
+    ClientesController.CriarCliente(req, res, next)
+})
+
+routes.post("/clientes/login", (req, res, next) =>{
+    ClientesController.Login(req, res, next)
 })
 
 routes.put("/clientes/:id", (req, res, next) =>{

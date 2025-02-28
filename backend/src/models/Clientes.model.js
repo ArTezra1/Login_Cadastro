@@ -7,7 +7,8 @@ const ClienteSchema = new mongoose.Schema({
     },
     email:{
         type: String,
-        required: [true, "Por favor insira o seu email."]
+        required: [true, "Por favor insira o seu email."],
+        unique: [true, "O email já está sendo usado."]
     },
     senha:{
         type: String,
